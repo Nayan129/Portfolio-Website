@@ -1,0 +1,340 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  scroll-behavior: smooth;
+  background-color: #1b2026;
+}
+main {
+  height: 100%;
+  width: 100%;
+}
+nav {
+  height: 5vw;
+  width: 100%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 8%;
+}
+.left {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  cursor: pointer;
+}
+.left:hover {
+  /* color:orangered; */
+  transition: all 0.2s cubic-bezier(1, 0, 0, 1);
+  opacity: 0.8;
+}
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  padding-right: 20px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+a:hover {
+  opacity: 1;
+  color: tomato;
+  transition: all 0.5s ease;
+}
+.right button {
+  cursor: pointer;
+  font-size: 14px;
+  padding: 8px 14px;
+  border: 2px solid rgba(77, 135, 235, 0.8);
+  border-radius: 12px;
+  background: rgb(3, 3, 3);
+  color: white;
+  letter-spacing: 0.5px;
+  transition: all 0.35s ease-in-out;
+  box-shadow: 0 0 0 rgba(77, 135, 235, 0);
+  position: relative;
+  overflow: hidden;
+}
+.right button:hover {
+  color: #fff;
+  background: linear-gradient(90deg, #4d87eb, #1a9fff);
+  border-color: transparent;
+  box-shadow: 0 0 10px rgba(77, 135, 235, 0.9), 0 0 20px rgba(77, 135, 235, 0.7),
+    0 0 40px rgba(77, 135, 235, 0.4);
+  transform: scale(1.05);
+}
+#hero {
+  height: calc(100% - 80px);
+  width: 100%;
+  /* background-color: rgb(40, 40, 37); */
+  color: white;
+  display: flex;
+}
+.img {
+  display: flex;
+  align-items: center;
+  margin: 30px 16%;
+}
+.img img {
+  height: 100%;
+  width: 100%;
+  border: 3px solid #fff;
+  border-radius: 10%;
+  object-fit: cover;
+  margin: 80px 20%;
+}
+
+#hero .desc {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px 70px;
+  overflow: hidden; /*new*/
+}
+.desc h4 {
+  font-size: 14px;
+  font-weight: 500;
+  padding-bottom: 7px;
+  /* new */
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: fadeInLeft 0.8s ease-out forwards;
+}
+.desc h1 {
+  font-size: 50px;
+  font-weight: 700;
+  /* new */
+  opacity: 0;
+  transform: translateX(-60px);
+  animation: fadeInLeft 1s ease-out forwards;
+  animation-delay: 0.3s;
+}
+.desc span {
+  color: aqua;
+  letter-spacing: 2px;
+}
+.desc p {
+  opacity: 0;
+  letter-spacing: 1.2px;
+  padding-top: 10px;
+  transform: translateX(-50px);
+  animation: fadeInLeft 1.2s ease-out forwards;
+  animation-delay: 0.6s;
+}
+/* Animation keyframes */
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.desc button {
+  margin-top: 20px;
+  height: 3vw;
+  width: 50%;
+  font-size: 16px;
+  font-weight: 600;
+  border: 1.5px solid rgb(15, 173, 240);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  background: transparent;
+  transition: all 0.35s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+.desc button:hover {
+  background: linear-gradient(90deg, #0fd3ff, #0fa0ff, #6e00ff);
+  box-shadow: 0 0 10px rgba(15, 173, 240, 0.8), 0 0 20px rgba(15, 173, 240, 0.6);
+  border-color: transparent;
+  transform: translateY(-2px);
+}
+
+/* about section */
+#about {
+  height: 100%;
+  width: 100%;
+  background-color: #1b2026;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.img2 {
+  height: 100%;
+  width: 50%;
+}
+.img2 img {
+  height: 80%;
+  width: 70%;
+  border: 3px solid rgb(255, 255, 255);
+  border-radius: 70%;
+  object-fit: cover;
+  margin: 9% 15%;
+}
+
+.info {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 20px;
+  gap: 15px;
+  color: white;
+}
+.info h2 {
+  font-size: 4vw;
+  font-weight: 700;
+}
+.info p {
+  letter-spacing: 1.5px;
+  font-size: 15px;
+  opacity: 0.7;
+  margin-right: 10rem;
+}
+.info button {
+  margin-top: 20px;
+  height: 3vw;
+  width: 40%;
+  font-size: 20px;
+  font-weight: 600;
+  border: 2px solid rgb(240, 130, 20);
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  background: black;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 0px rgba(240, 130, 20, 0);
+}
+.info button:hover {
+  background: rgb(240, 130, 20);
+  color: black;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(15, 173, 240, 0.8), 0 0 20px rgba(15, 173, 240, 0.6);
+}
+/* ...........Projects section............ */
+.projectHeading {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: 1.4px;
+  margin-top: 10px;
+  color: white;
+}
+#projects {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0px 5%;
+  flex-wrap: wrap;
+}
+.projectInfo {
+  height: 70vh;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 0;
+  gap: 13px;
+}
+.projectInfo > h2 {
+  font-size: 1.6vw;
+  font-weight: 600;
+  color: white;
+  letter-spacing: 1.2px;
+  margin-bottom: 10px;
+}
+.projectInfo .btn {
+  display: flex;
+  gap: 7px;
+}
+.projectInfo .btn > button {
+  font-size: 14px;
+  padding: 4px 10px;
+  border: 2px solid rgb(46, 46, 46);
+  border-radius: 50px;
+  color: white;
+  background: transparent;
+  cursor: pointer;
+}
+.projectDsc {
+  font-size: 14px;
+  margin-right: 10%;
+  font-weight: 400;
+  color: white;
+  letter-spacing: 2px;
+}
+.projectLinksBtn {
+  display: flex;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.projectLinksBtn button {
+  padding: 10px 25px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+.projectLinksBtn .btn1 {
+  background: linear-gradient(90deg, #ff7b00, #ff4500);
+  color: white;
+  border: none;
+}
+.projectLinksBtn .btn1:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(255, 120, 0, 0.6);
+}
+.projectLinksBtn .btn2 {
+  background: transparent;
+  color: #ff7b00;
+  border: 2px solid #ff7b00;
+}
+.projectLinksBtn .btn2:hover {
+  background: linear-gradient(90deg, #ff7b00, #ff4500);
+  color: white;
+  box-shadow: 0 0 15px rgba(255, 120, 0, 0.5);
+  transform: translateY(-3px);
+}
+
+.projectDisplay {
+  height: 70vh;
+  width: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 0;
+}
+/* image better */
+.projectDisplay img {
+  height: 60%;
+  width: 75%;
+  object-fit: cover;
+  object-position: center;
+  border: 3px solid white;
+  border-radius: 10px;
+}
